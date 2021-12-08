@@ -6,7 +6,7 @@
 
 ## Description
 
-* A movieshop android app to list available videos and swipe view to see more details of each video.
+* A movieshop android app to list available videos and swipe view to see more details of each video using giant bomb api.
 
 ### Prerequisites
 
