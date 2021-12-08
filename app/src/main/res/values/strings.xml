@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MovieShop</string>
+    <string name="find_your_favorite_movies">Find Your Favorite Movies</string>
+    <string name="background_image">background_image</string>
+    <string name="my_name">MY NAME:</string>
+    <string name="go">GO</string>
+    <string name="welcome">Welcome</string>
+    <string name="available_novel_based_movies">Loading Available Videos</string>
+    <string name="my_profile">My Profile</string>
+    <string name="your_user_name">your user name</string>
+    <string name="error_message">Error Message</string>
+    <string name="video_date">video Date</string>
+    <string name="video_title">video Title</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
