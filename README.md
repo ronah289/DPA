@@ -1,4 +1,4 @@
-# MovieShop
+# GiantBombApi
 
 ## Author
 
@@ -21,12 +21,12 @@
 ### Setup
 
 * To access this project locally in your machine,use the command:
-`$ git clone https://github.com/ronah289/Movieshop.git`
+`$ git clone https://github.com/ronah289/GiantBombApi.git`
 to clone to your machine.
 * Open in android-studio
 
 ## Behaviour Driven Development
-#### MovieShop
+#### GiantBombApi
 <ol>
 <li>user name</li>
  - type name on startup
