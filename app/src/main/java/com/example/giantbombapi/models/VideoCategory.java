@@ -25,10 +25,6 @@ public class VideoCategory {
     @Expose
     private String siteDetailUrl;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public VideoCategory() {
     }
 

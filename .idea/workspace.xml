@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b8e232a-4205-48c4-9612-931524b6af78" name="Default Changelist" comment="" />
+    <list default="true" id="2b8e232a-4205-48c4-9612-931524b6af78" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/AllVideos.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/AllVideos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Image__1.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Image__1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Logo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Logo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/VideoCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/VideoCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/VideoShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/models/VideoShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/MoviesListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/MoviesListActivity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,5 +114,17 @@
       <updated>1638989145339</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

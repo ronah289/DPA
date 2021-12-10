@@ -42,16 +42,11 @@ public class Image {
     @SerializedName("image_tags")
     @Expose
     private String imageTags;
-
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Image() {
     }
 
     /**
-     * 
+     *
      * @param smallUrl
      * @param mediumUrl
      * @param screenUrl

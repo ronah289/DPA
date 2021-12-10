@@ -62,10 +62,6 @@ public class Result {
     @Expose
     private String url;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Result() {
     }
 

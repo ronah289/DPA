@@ -34,10 +34,6 @@ public class VideoShow {
     @Expose
     private com.example.giantbombapi.models.Logo logo;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public VideoShow() {
     }
 

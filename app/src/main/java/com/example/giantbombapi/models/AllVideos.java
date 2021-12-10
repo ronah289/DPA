@@ -8,7 +8,6 @@ import org.parceler.Parcel;
 
 import java.util.List;
 
-//@Generated("jsonschema2pojo")
 @SuppressWarnings("ALL")
 @Parcel
 public class AllVideos {
@@ -37,16 +36,11 @@ public class AllVideos {
     @SerializedName("version")
     @Expose
     private String version;
-
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public AllVideos() {
     }
 
     /**
-     * 
+     *
      * @param numberOfPageResults
      * @param numberOfTotalResults
      * @param offset
@@ -56,7 +50,6 @@ public class AllVideos {
      * @param version
      * @param statusCode
      */
-    @SuppressWarnings("all")
     public AllVideos(String error, Integer limit, Integer offset, Integer numberOfPageResults, Integer numberOfTotalResults, Integer statusCode, List<Result> results, String version) {
         super();
         this.error = error;

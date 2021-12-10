@@ -43,10 +43,6 @@ public class Image__1 {
     @Expose
     private String imageTags;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Image__1() {
     }
 

@@ -79,8 +79,10 @@ public class MoviesListActivity extends AppCompatActivity{
                     recyclerView.setHasFixedSize(true);
 
                     showresult();
-                }  //                     showUnsuccessfulMessage();
-
+                }
+                else {
+                    showUnsuccessfulMessage();
+                }
 
             }
 
@@ -97,5 +99,9 @@ public class MoviesListActivity extends AppCompatActivity{
 
     private void hideProgressBar() {
         progress.setVisibility(View.GONE);
+    }
+    private void showUnsuccessfulMessage() {
+        errors.setText("Error.Try Later");
+        errors.setVisibility(View.VISIBLE);
     }
 }

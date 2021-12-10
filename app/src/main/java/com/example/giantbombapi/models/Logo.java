@@ -40,10 +40,6 @@ public class Logo {
     @Expose
     private String originalUrl;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public Logo() {
     }
 
