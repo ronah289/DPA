@@ -100,6 +100,7 @@ public class MoviesListActivity extends AppCompatActivity{
     private void hideProgressBar() {
         progress.setVisibility(View.GONE);
     }
+    @SuppressLint("SetTextI18n")
     private void showUnsuccessfulMessage() {
         errors.setText("Error.Try Later");
         errors.setVisibility(View.VISIBLE);
