@@ -1,8 +1,10 @@
 package com.example.giantbombapi.ui;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -29,6 +31,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MoviesListActivity extends AppCompatActivity{
+    private SharedPreferences mSharedPrefs;
+    private String mUser;
+
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.textView) TextView errors;
     @SuppressLint("NonConstantResourceId")
@@ -52,8 +57,10 @@ public class MoviesListActivity extends AppCompatActivity{
         getVideos();
         TextView userWelcome = findViewById(R.id.welcomeUser);
 
-        Intent usernameIntent = getIntent();
-        String username = usernameIntent.getStringExtra("username");
+        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mUser = mSharedPrefs.getString(Constants.USER_NAME, null);
+        Log.d("Recent User", mUser);
+        String username = mUser;
         userWelcome.setText(String.format("Welcome %s", username));
     }
 
