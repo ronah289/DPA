@@ -31,9 +31,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MoviesListActivity extends AppCompatActivity{
-    private SharedPreferences mSharedPrefs;
-    private String mUser;
-
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.textView) TextView errors;
     @SuppressLint("NonConstantResourceId")
@@ -41,11 +38,11 @@ public class MoviesListActivity extends AppCompatActivity{
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.available_list) TextView availableVideos;
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.progressbar)
-    ProgressBar progress;
+    @BindView(R.id.progressbar) ProgressBar progress;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
-
+    private SharedPreferences mSharedPrefs;
+    private String mUser;
     private AllVideosAdapter videos;
     private List<Result> results;
 
