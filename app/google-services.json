@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "455430432229",
+    "project_id": "giantbombapi",
+    "storage_bucket": "giantbombapi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455430432229:android:ac5bc459a28751fc2bfb0c",
+        "android_client_info": {
+          "package_name": "com.example.giantbombapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455430432229-4big6r76d8pqgmibubbrm4epa6l5qqif.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.giantbombapi",
+            "certificate_hash": "9cb68195b831c64e762b0f9e90c3b1561060dc0f"
+          }
+        },
+        {
+          "client_id": "455430432229-dfajigajkt7tl5r7biut432upq99v88g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo5liwUyG0JU8R6hA10oFMD9MVH16hmTg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455430432229-dfajigajkt7tl5r7biut432upq99v88g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
