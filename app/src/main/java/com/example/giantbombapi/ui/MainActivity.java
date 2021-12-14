@@ -1,11 +1,6 @@
 package com.example.giantbombapi.ui;
 
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,19 +12,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.giantbombapi.Constants;
 import com.example.giantbombapi.R;
 
 import java.util.Locale;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private SharedPreferences mSharedPreferences;
     private SharedPreferences.Editor mEditor;
 
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.editTextPersonName) EditText my_name;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.go_button) Button go_button;
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.favoriteVideos) Button mFavoriteVideos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPreferences.edit();
 
 
         go_button.setOnClickListener(this);
+        mFavoriteVideos.setOnClickListener(this);
     }
             @Override
             public void onClick(View view) {
@@ -62,6 +64,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(MainActivity.this, MoviesListActivity.class);
                 startActivity(intent);
             }
+        }
+        else if(view == mFavoriteVideos){
+            Intent intent = new Intent(MainActivity.this, SavedVideoListActivity.class);
+            startActivity(intent);
         }
             }
     private void addToSharedPrefs(String username) {
