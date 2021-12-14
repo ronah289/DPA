@@ -6,30 +6,36 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.giantbombapi.ui.MoviesDetailActivity;
 import com.example.giantbombapi.R;
 import com.example.giantbombapi.models.Result;
+import com.example.giantbombapi.ui.MoviesDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AllVideosAdapter extends RecyclerView.Adapter<AllVideosAdapter.allVideosViewHolder> {
+@SuppressWarnings("ALL")
+public class AllVideosAdapter extends RecyclerView.Adapter<AllVideosAdapter.allVideosViewHolder> implements Filterable {
 
     private static List<Result> mAllVideos;
+    private static List<Result> UnFilteredVideos;
 
     public AllVideosAdapter(List<Result> allVideos) {
         mAllVideos = allVideos;
+        UnFilteredVideos = new ArrayList<>(mAllVideos);
     }
 
 
@@ -50,6 +56,40 @@ public class AllVideosAdapter extends RecyclerView.Adapter<AllVideosAdapter.allV
         return mAllVideos.size();
     }
 
+    @Override
+    public Filter getFilter() {
+        return FilteredVideos;
+    }
+
+    private final Filter FilteredVideos = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            List<Result> FilteredVideos = new ArrayList<>();
+            if (charSequence == null || charSequence.length() == 0 ){
+                FilteredVideos.addAll(UnFilteredVideos);
+            }
+            else{
+                String userSearchString = charSequence.toString().toLowerCase().trim();
+                for(Result EachVideo : UnFilteredVideos){
+                    if(EachVideo.getName().toLowerCase().contains(userSearchString)){
+                        FilteredVideos.add(EachVideo);
+                    }
+                }
+
+            }
+            FilterResults matchedVideos = new FilterResults();
+            matchedVideos.values = FilteredVideos;
+            return matchedVideos;
+        }
+
+        @SuppressLint("NotifyDataSetChanged")
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults matchedVideos) {
+            mAllVideos.clear();
+            mAllVideos.addAll((List)matchedVideos.values);
+            notifyDataSetChanged();
+        }
+    };
 
     public static class allVideosViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
