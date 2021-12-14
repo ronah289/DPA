@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -41,8 +40,6 @@ public class MoviesListActivity extends AppCompatActivity{
     @BindView(R.id.progressbar) ProgressBar progress;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
-    private SharedPreferences mSharedPrefs;
-    private String mUser;
     private AllVideosAdapter videos;
     private List<Result> results;
 
@@ -54,11 +51,9 @@ public class MoviesListActivity extends AppCompatActivity{
         getVideos();
         TextView userWelcome = findViewById(R.id.welcomeUser);
 
-        mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        mUser = mSharedPrefs.getString(Constants.USER_NAME, null);
-        Log.d("Recent User", mUser);
-        String username = mUser;
-        userWelcome.setText(String.format("Welcome %s", username));
+        SharedPreferences mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String mUser = mSharedPrefs.getString(Constants.USER_NAME, null);
+        userWelcome.setText(String.format("Welcome %s", mUser));
     }
 
     public void getVideos(){
