@@ -65,6 +65,16 @@
         android:minWidth="95dp"
         android:text="@string/go"
         android:textSize="20sp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_favorites"
+        android:id="@+id/favoriteVideos"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:ignore="RtlHardcoded" />
 
 
 </RelativeLayout>
