@@ -14,13 +14,17 @@
         android:theme="@style/Theme.GiantBombApi"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".ui.CreateAccountActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.SavedVideoListActivity"
             android:exported="true" />
         <activity
             android:name=".ui.MoviesDetailActivity"
             android:exported="true" />
-        <activity android:name=".ui.MoviesListActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".ui.MoviesListActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
