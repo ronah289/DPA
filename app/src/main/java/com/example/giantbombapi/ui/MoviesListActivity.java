@@ -113,7 +113,7 @@ public class MoviesListActivity extends AppCompatActivity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.search_bar,menu);
+        inflater.inflate(R.menu.search_menu,menu);
 
         MenuItem search = menu.findItem(R.id.search_icon);
         SearchView searchView = (SearchView) search.getActionView();

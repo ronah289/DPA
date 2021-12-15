@@ -7,6 +7,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.giantbombapi.Constants;
 import com.example.giantbombapi.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Locale;
 
@@ -45,7 +49,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         go_button.setOnClickListener(this);
         mFavoriteVideos.setOnClickListener(this);
     }
-            @Override
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.exit_app) {
+            exit_app();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void exit_app() {
+        FirebaseAuth.getInstance().signOut();
+    }
+
+    @Override
             public void onClick(View view) {
         if(view == go_button){
             String username = my_name.getText().toString();
@@ -69,8 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, SavedVideoListActivity.class);
             startActivity(intent);
         }
-            }
+    }
     private void addToSharedPrefs(String username) {
-        mEditor.putString(Constants.USER_NAME, username).apply();
+        mEditor.putString(Constants.USER_NAME, username).apply(); 
     }
-    }
+}
