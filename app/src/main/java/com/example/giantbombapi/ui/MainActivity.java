@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-            public void onClick(View view) {
+    public void onClick(View view) {
         if(view == go_button){
             String username = my_name.getText().toString();
             if(username.equals("")){

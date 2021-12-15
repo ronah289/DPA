@@ -14,6 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b8e232a-4205-48c4-9612-931524b6af78" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/CreateAccountActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/CreateAccountActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639550919421</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add code to redirect to login activity on logout">
+      <created>1639551105400</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1639551105400</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +204,7 @@
     <MESSAGE value="add user sign up ability" />
     <MESSAGE value="implement app redirect from create account activity to main activity" />
     <MESSAGE value="implement logout in overflow menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement logout in overflow menu" />
+    <MESSAGE value="add code to redirect to login activity on logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add code to redirect to login activity on logout" />
   </component>
 </project>

@@ -74,30 +74,31 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         String password = password1.getText().toString().trim();
         String confirmPassword = password2.getText().toString().trim();
 
+        boolean validEmail = isValidEmail(email);
+        boolean validName = isValidName(name);
+        boolean validPassword = isValidPassword(password, confirmPassword);
+        if (!validEmail || !validName || !validPassword) return;
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         Log.d("auth", "Authentication successful");
-                    } else {
+                    }
+                    else {
                         Toast.makeText(CreateAccountActivity.this, "Authentication failed.",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
     }
     private void createAuthStateListener() {
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
-
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                final FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    Intent intent = new Intent(CreateAccountActivity.this, MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                    finish();
-                }
+        mAuthListener = firebaseAuth -> {
+            final FirebaseUser user = firebaseAuth.getCurrentUser();
+            if (user != null) {
+                Intent intent = new Intent(CreateAccountActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
             }
-
         };
     }
     @Override
@@ -112,5 +113,34 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
         }
+    }
+
+    private boolean isValidEmail(String email) {
+        boolean isGoodEmail =
+                (email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches());
+        if (!isGoodEmail) {
+            emailAddress.setError("Enter a valid email address");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidName(String name) {
+        if (name.equals("")) {
+            personName.setError("Enter your name");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isValidPassword(String password, String confirmPassword) {
+        if (password.length() < 6) {
+            password1.setError("Create a password containing at least 6 characters");
+            return false;
+        } else if (!password.equals(confirmPassword)) {
+            password2.setError("Passwords mismatch");
+            return false;
+        }
+        return true;
     }
 }
