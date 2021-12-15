@@ -40,11 +40,6 @@ public class FirebaseVideoViewHolder extends RecyclerView.ViewHolder implements 
     public void bindVideo(Result videos) {
         TextView videoTitle = mView.findViewById(R.id.videoTitleTextView);
         TextView date = mView.findViewById(R.id.dateTextView);
-        /*
-        hold image..
-        ImageView image = mView.findViewById(R.id.videoImageView);
-        Picasso.get().load(videos.getImage().getIconUrl()).into(image);
-*/
         date.setText(videos.getPublishDate());
         videoTitle.setText(videos.getName());
     }
@@ -53,6 +48,7 @@ public class FirebaseVideoViewHolder extends RecyclerView.ViewHolder implements 
     public void onClick(View view) {
         final ArrayList<Result> videos = new ArrayList<>();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        assert user != null;
         String uid = user.getUid();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_VIDEOS).child(uid);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
