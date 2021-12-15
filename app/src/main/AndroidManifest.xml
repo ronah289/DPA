@@ -14,6 +14,9 @@
         android:theme="@style/Theme.GiantBombApi"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".ui.MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.CreateAccountActivity"
             android:exported="true" />
         <activity
@@ -22,11 +25,13 @@
         <activity
             android:name=".ui.MoviesDetailActivity"
             android:exported="true" />
+        <activity android:name=".ui.MoviesListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
         <activity
-            android:name=".ui.MoviesListActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
