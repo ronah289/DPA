@@ -34,10 +34,10 @@
         android:text="LOGIN" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/signupText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_button"
         android:layout_centerHorizontal="true"
-        android:text="No Account? Go TO SignUp" />
+        android:text="No Account? Go To SignUp" />
 </RelativeLayout>

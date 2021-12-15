@@ -45,7 +45,7 @@ public class SavedVideoListActivity extends AppCompatActivity {
         mVideoReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_VIDEOS);
         setUpFirebaseAdapter();
         hideProgressBar();
-        showRestaurants();
+        showSavedVideos();
     }
 
     private void setUpFirebaseAdapter(){
@@ -86,7 +86,7 @@ public class SavedVideoListActivity extends AppCompatActivity {
         }
     }
 
-    private void showRestaurants() {
+    private void showSavedVideos() {
         mRecyclerView.setVisibility(View.VISIBLE);
     }
 
