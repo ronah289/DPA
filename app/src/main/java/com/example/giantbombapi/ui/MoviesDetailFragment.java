@@ -18,6 +18,8 @@ import com.example.giantbombapi.Constants;
 import com.example.giantbombapi.R;
 import com.example.giantbombapi.models.Result;
 import com.example.giantbombapi.models.VideoCategory;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -105,10 +107,18 @@ public class MoviesDetailFragment extends Fragment implements View.OnClickListen
             startActivity(browserIntent);
         }
         else if (view == mAddToFavorites){
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            assert user != null;
+            String uid = user.getUid();
             DatabaseReference oneVideo = FirebaseDatabase
                     .getInstance()
-                    .getReference(Constants.FIREBASE_CHILD_VIDEOS);
-            oneVideo.push().setValue(mResult);
+                    .getReference(Constants.FIREBASE_CHILD_VIDEOS)
+                    .child(uid);
+
+            DatabaseReference pushRef = oneVideo.push();
+            String pushId = pushRef.getKey();
+            mResult.setItemIdentity(pushId);
+            pushRef.setValue(mResult);
             Toast.makeText(getContext(), "Added To Favorites", Toast.LENGTH_SHORT).show();
         }
 

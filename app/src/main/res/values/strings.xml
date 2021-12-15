@@ -2,7 +2,7 @@
     <string name="app_name">MovieShop</string>
     <string name="find_your_favorite_movies">Find Your Favorite Movies</string>
     <string name="background_image">background_image</string>
-    <string name="my_name">MY NAME:</string>
+    <string name="my_name">MY ALIAS:</string>
     <string name="go">GO</string>
     <string name="welcome">Welcome</string>
     <string name="available_novel_based_movies">Loading Available Videos</string>

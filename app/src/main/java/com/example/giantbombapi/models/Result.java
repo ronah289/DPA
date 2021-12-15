@@ -62,6 +62,8 @@ public class Result {
     @Expose
     private String url;
 
+    private String itemIdentity;
+
     public Result() {
     }
 
@@ -237,6 +239,14 @@ public class Result {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getItemIdentity() {
+        return itemIdentity;
+    }
+
+    public void setItemIdentity(String itemIdentity) {
+        this.itemIdentity = itemIdentity;
     }
 
 }

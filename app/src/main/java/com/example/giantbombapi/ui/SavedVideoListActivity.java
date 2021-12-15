@@ -19,6 +19,8 @@ import com.example.giantbombapi.adapters.FirebaseVideoViewHolder;
 import com.example.giantbombapi.models.Result;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -42,10 +44,16 @@ public class SavedVideoListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movies);
         ButterKnife.bind(this);
 
-        mVideoReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_VIDEOS);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        assert user != null;
+        String uid = user.getUid();
+
+        mVideoReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_VIDEOS)
+        .child(uid);
         setUpFirebaseAdapter();
         hideProgressBar();
         showSavedVideos();
+
     }
 
     private void setUpFirebaseAdapter(){

@@ -13,6 +13,8 @@ import com.example.giantbombapi.Constants;
 import com.example.giantbombapi.R;
 import com.example.giantbombapi.models.Result;
 import com.example.giantbombapi.ui.MoviesDetailActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -50,7 +52,9 @@ public class FirebaseVideoViewHolder extends RecyclerView.ViewHolder implements 
     @Override
     public void onClick(View view) {
         final ArrayList<Result> videos = new ArrayList<>();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_VIDEOS);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_VIDEOS).child(uid);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
