@@ -1,4 +1,4 @@
-# GiantBombApi
+# DataPersistence
 
 ## Author
 
@@ -26,7 +26,7 @@ to clone to your machine.
 * Open in android-studio
 
 ## Behaviour Driven Development
-#### GiantBombApi
+#### DataPersistence
 <ol>
 <li>login</li>
  - log in to app or go to create account to create account for new user
