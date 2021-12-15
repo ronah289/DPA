@@ -15,8 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b8e232a-4205-48c4-9612-931524b6af78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/CreateAccountActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/CreateAccountActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/giantbombapi/ui/LoginActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639551105400</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add validation for sign up values">
+      <created>1639552479596</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639552479596</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +211,7 @@
     <MESSAGE value="implement app redirect from create account activity to main activity" />
     <MESSAGE value="implement logout in overflow menu" />
     <MESSAGE value="add code to redirect to login activity on logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add code to redirect to login activity on logout" />
+    <MESSAGE value="add validation for sign up values" />
+    <option name="LAST_COMMIT_MESSAGE" value="add validation for sign up values" />
   </component>
 </project>
