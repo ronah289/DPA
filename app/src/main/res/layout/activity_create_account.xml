@@ -12,7 +12,8 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="John Doe"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        tools:ignore="Autofill,HardcodedText" />
 
     <EditText
         android:id="@+id/editTextEmailAddress"
@@ -22,7 +23,9 @@
         android:layout_centerVertical="true"
         android:ems="10"
         android:hint="example@gmail.com"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:importantForAutofill="no"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editTextPassword1"
@@ -32,7 +35,8 @@
         android:layout_below="@id/editTextEmailAddress"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="Autofill,HardcodedText" />
 
     <EditText
         android:id="@+id/editTextPassword2"
@@ -42,7 +46,8 @@
         android:layout_below="@id/editTextPassword1"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="Autofill,HardcodedText" />
 
     <Button
         android:id="@+id/createAccount"
@@ -50,7 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextPassword2"
         android:layout_centerHorizontal="true"
-        android:text="Create Account" />
+        android:text="Create Account"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/go_to_login"
@@ -58,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/createAccount"
-        android:text="Not A New User? Go To Login" />
+        android:text="Not A New User? Go To Login"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>

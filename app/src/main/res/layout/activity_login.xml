@@ -13,7 +13,8 @@
         android:layout_centerHorizontal="true"
         android:hint="example@email.com"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        tools:ignore="Autofill,HardcodedText" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -23,7 +24,8 @@
         android:layout_centerVertical="true"
         android:hint="password"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="Autofill,HardcodedText" />
 
     <Button
         android:id="@+id/login_button"
@@ -31,7 +33,8 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN" />
+        android:text="LOGIN"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/signupText"
@@ -39,5 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/login_button"
         android:layout_centerHorizontal="true"
-        android:text="No Account? Go To SignUp" />
+        android:text="No Account? Go To SignUp"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>
