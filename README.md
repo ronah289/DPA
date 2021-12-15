@@ -6,7 +6,7 @@
 
 ## Description
 
-* A movieshop android app to list available videos and swipe view to see more details of each video using giant bomb api.
+* A movieshop android app to create account and login to view the list of available videos and swipe view to see more details of each video,add a video to user's favorites using giant bomb api.
 
 ### Prerequisites
 
@@ -28,13 +28,22 @@ to clone to your machine.
 ## Behaviour Driven Development
 #### GiantBombApi
 <ol>
+<li>login</li>
+ - log in to app or go to create account to create account for new user
 <li>user name</li>
- - type name on startup
+ - type user's alias after signing up or logging in
 <li>available movies</li>
  - click go button in startup screen
 <li>view video's details profile</li>
  - click on a video to switch to detailed view
  - swipe left or right to go to next video
+ - add a video to user's favorites
+<li>view favorites</li>
+ - go back from video list
+ - click my favorites to view user's favorite videos
+<li>logout</li>
+ - click overflow in main screen to access logout button
+ - click logout button to quit app
 </ol>
 
 ## Technologies Used
