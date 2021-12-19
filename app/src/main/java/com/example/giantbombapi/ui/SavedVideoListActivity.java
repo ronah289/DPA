@@ -32,6 +32,11 @@ public class SavedVideoListActivity extends AppCompatActivity {
     private FirebaseRecyclerAdapter<Result, FirebaseVideoViewHolder> mFirebaseAdapter;
 
     @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.welcomeUser) TextView userWelcome;
+    @SuppressLint("NonConstantResourceId")
+    @BindView(R.id.available_list) TextView availableVideos;
+
+    @SuppressLint("NonConstantResourceId")
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @SuppressLint("NonConstantResourceId")
     @BindView(R.id.textView) TextView mErrorTextView;
@@ -100,5 +105,6 @@ public class SavedVideoListActivity extends AppCompatActivity {
 
     private void hideProgressBar() {
         mProgressBar.setVisibility(View.GONE);
+        userWelcome.setVisibility(View.GONE);
     }
 }
