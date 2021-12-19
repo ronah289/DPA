@@ -32,21 +32,21 @@ public class SavedVideoListActivity extends AppCompatActivity {
     private FirebaseRecyclerAdapter<Result, FirebaseVideoViewHolder> mFirebaseAdapter;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.welcomeUser) TextView userWelcome;
+    @BindView(R.id.welcomeUser) TextView sUserWelcome;
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.available_list) TextView availableVideos;
+    @BindView(R.id.available_list) TextView sAvailableVideos;
 
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
+    @BindView(R.id.recyclerView) RecyclerView sRecyclerView;
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.textView) TextView mErrorTextView;
+    @BindView(R.id.textView) TextView sErrorTextView;
     @SuppressLint("NonConstantResourceId")
-    @BindView(R.id.progressbar) ProgressBar mProgressBar;
+    @BindView(R.id.progressbar) ProgressBar sProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_movies);
+        setContentView(R.layout.activity_saved_video_list);
         ButterKnife.bind(this);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -81,8 +81,8 @@ public class SavedVideoListActivity extends AppCompatActivity {
             }
         };
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(mFirebaseAdapter);
+        sRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        sRecyclerView.setAdapter(mFirebaseAdapter);
     }
 
     @Override
@@ -100,11 +100,11 @@ public class SavedVideoListActivity extends AppCompatActivity {
     }
 
     private void showSavedVideos() {
-        mRecyclerView.setVisibility(View.VISIBLE);
+        sRecyclerView.setVisibility(View.VISIBLE);
     }
 
     private void hideProgressBar() {
-        mProgressBar.setVisibility(View.GONE);
-        userWelcome.setVisibility(View.GONE);
+        sProgressBar.setVisibility(View.GONE);
+        sUserWelcome.setVisibility(View.GONE);
     }
 }
