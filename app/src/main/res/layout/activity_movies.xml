@@ -34,7 +34,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layoutAnimation="@anim/layout_animation"
+        android:layoutAnimation="@anim/layout_animation_2"
         android:visibility="gone"/>
 
     <TextView
