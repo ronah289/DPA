@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDF3F2">
+
+    <TextView
+        android:id="@+id/welcomeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8BC34A"
+        android:text="@string/welcome"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/available_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24.5dp"
+        android:fontFamily="@font/bungee"
+        android:text="@string/available_novel_based_movies" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyle"
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutAnimation="@anim/layout_animation_2"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_message"
+        android:id="@+id/textView"
+        android:visibility="gone"/>
+
+</RelativeLayout>
