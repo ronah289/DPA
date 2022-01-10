@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MoviesDetailFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/videoImageView"
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:scaleType="fitCenter"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/white"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/mWebLinkLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="204dp"
+            android:layout_marginLeft="204dp"
+            android:text="Category"
+            android:textStyle="italic"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/AddToFavoritesButton"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginBottom="-44dp"
+                android:background="#A0E818"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingTop="3.5dp"
+                android:paddingRight="30dp"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/DateTextView"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/ic_calendar_today_black_24dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="4 4 2021"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                <TextView
+                    android:id="@+id/videoUrlTextView"
+                    android:layout_width="238dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:drawablePadding="4dp"
+                    android:gravity="center_vertical"
+                    android:text="Video Link"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:drawableLeftCompat="@drawable/ic_web_link_black_24dp"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/websiteTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/ic_web_asset_black_24dp"
+                    android:drawablePadding="1dp"
+                    android:gravity="center"
+                    android:text="View Icon"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/AddToFavoritesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="ADD TO FAVORITES"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
