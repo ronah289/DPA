@@ -1,4 +1,4 @@
-# DataPersistence
+# DPA
 
 ## Author
 
@@ -21,12 +21,12 @@
 ### Setup
 
 * To access this project locally in your machine,use the command:
-`$ git clone https://github.com/ronah289/GiantBombApi.git`
+`$ git clone https://github.com/ronah289/DPA.git`
 to clone to your machine.
 * Open in android-studio
 
 ## Behaviour Driven Development
-#### DataPersistence
+#### DPA
 <ol>
 <li>login</li>
  - log in to app or go to create account to create account for new user
